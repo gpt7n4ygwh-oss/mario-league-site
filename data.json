@@ -1,21 +1,21 @@
 {
   "standings": [
-    { "team": "Mario's fireballs", "wins": 6, "losses": 2 },
-    { "team": "Luigi's Green Machine", "wins": 4, "losses": 3 },
-    { "team": "Bowser's Bruisers", "wins": 2, "losses": 5 },
-    { "team": "Peach's Punchers", "wins": 4, "losses": 3 },
-    { "team": "Flower Butts", "wins": 4, "losses": 4 }
+    { "team": "Mario Fireballs", "wins": 6, "losses": 2 },
+    { "team": "Luigi Knights", "wins": 4, "losses": 3 },
+    { "team": "Bowser Monsters", "wins": 2, "losses": 5 },
+    { "team": "Peach Monarchs", "wins": 4, "losses": 3 },
+    { "team": "Daisy Flowers", "wins": 4, "losses": 4 }
   ],
    "schedule": [
-        { "date": "2024-06-01", "home_team": "Mario's fireballs", "away_team": "Luigi's Green Machine", "result": "Mario's fireballs won 5-3" },
-        { "date": "2024-06-02", "home_team": "Bowser's Bruisers", "away_team": "Peach's Punchers", "result": "Peach's Punchers won 6-3" },
-        { "date": "2024-06-03", "home_team": "Flower Butts", "away_team": "Mario's fireballs", "result": "Mario's fireballs won 4-2" },
-        { "date": "2024-06-04", "home_team": "Luigi's Green Machine", "away_team": "Bowser's Bruisers", "result": "Bowser's Bruisers won 7-1" },
-        { "date": "2024-06-05", "home_team": "Peach's Punchers", "away_team": "Flower Butts", "result": "Flower Butts won 3-0" }
+        { "date": "2024-06-01", "home_team": "Mario Fireballs", "away_team": "Luigi Knights", "result": "Mario Fireballs won 5-3" },
+        { "date": "2024-06-02", "home_team": "Bowser Monsters", "away_team": "Peach Monarchs", "result": "Peach Monarchs won 6-3" },
+        { "date": "2024-06-03", "home_team": "Daisy Flowers", "away_team": "Mario Fireballs", "result": "Mario Fireballs won 4-2" },
+        { "date": "2024-06-04", "home_team": "Luigi Knights", "away_team": "Bowser Monsters", "result": "Bowser Monsters won 7-1" },
+        { "date": "2024-06-05", "home_team": "Peach Monarchs", "away_team": "DK Wilds", "result": "DK Wilds won 3-0" }
     ],
     "trades": [
-        { "date": "2024-06-01", "TeamA": "Mario's fireballs", "TeamASends": "Yoshi", "TeamB": "Luigi's Green Machine",  "TeamBSends": "Waluigi" },
-        { "date": "2024-06-02", "TeamA": "Bowser's Bruisers", "TeamASends": "Toad", "TeamB": "Peach's Punchers", "TeamBSends": "Daisy" },
-        { "date": "2024-06-03", "TeamA": "Flower Butts", "TeamASends": "Daisy", "TeamB": "Mario's fireballs", "TeamBSends": "Yoshi" }
+        { "date": "2024-06-01", "TeamA": "Mario Fireballs", "TeamASends": "Green Koopa", "TeamB": "Luigi Knights",  "TeamBSends": "Waluigi" },
+        { "date": "2024-06-02", "TeamA": "Bowser Monsters", "TeamASends": "Red Toad", "TeamB": "Peach Monarchs", "TeamBSends": "Daisy" },
+        { "date": "2024-06-03", "TeamA": "Daisy Flowers", "TeamASends": "Daisy", "TeamB": "Mario Fireballs", "TeamBSends": "Yoshi" }
     ]
 }
