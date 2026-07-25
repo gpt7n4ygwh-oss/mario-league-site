@@ -1,10 +1,10 @@
 {
   "standings": [
-    { "team": "Mario Fireballs", "wins": 6, "losses": 2 },
-    { "team": "Luigi Knights", "wins": 4, "losses": 3 },
-    { "team": "Bowser Monsters", "wins": 2, "losses": 5 },
-    { "team": "Peach Monarchs", "wins": 4, "losses": 3 },
-    { "team": "Daisy Flowers", "wins": 4, "losses": 4 }
+    { "team": "Mario Fireballs", "wins": 6, "losses": 2, "runDifferential": 14 },
+    { "team": "Luigi Knights", "wins": 4, "losses": 3, "runDifferential": 5 },
+    { "team": "Bowser Monsters", "wins": 2, "losses": 5, "runDifferential": -10 },
+    { "team": "Peach Monarchs", "wins": 4, "losses": 3, "runDifferential": 3 },
+    { "team": "Daisy Flowers", "wins": 4, "losses": 4, "runDifferential": 0 }
   ],
    "schedule": [
         { "date": "2024-06-01", "home_team": "Mario Fireballs", "away_team": "Luigi Knights", "result": "Mario Fireballs won 5-3" },
@@ -14,8 +14,8 @@
         { "date": "2024-06-05", "home_team": "Peach Monarchs", "away_team": "DK Wilds", "result": "DK Wilds won 3-0" }
     ],
     "trades": [
-        { "date": "2024-06-01", "TeamA": "Mario Fireballs", "TeamASends": "Green Koopa", "TeamB": "Luigi Knights",  "TeamBSends": "Waluigi" },
-        { "date": "2024-06-02", "TeamA": "Bowser Monsters", "TeamASends": "Red Toad", "TeamB": "Peach Monarchs", "TeamBSends": "Daisy" },
-        { "date": "2024-06-03", "TeamA": "Daisy Flowers", "TeamASends": "Daisy", "TeamB": "Mario Fireballs", "TeamBSends": "Yoshi" }
+        { "date": "2024-06-01", "TeamA": "Mario Fireballs", "TeamASends": ["Green Koopa", "Red Koopa"], "TeamB": "Luigi Knights",  "TeamBSends": ["Waluigi"] },
+        { "date": "2024-06-02", "TeamA": "Bowser Monsters", "TeamASends": ["Red Toad"], "TeamB": "Peach Monarchs", "TeamBSends": ["Daisy"] },
+        { "date": "2024-06-03", "TeamA": "Daisy Flowers", "TeamASends": ["Daisy"], "TeamB": "Mario Fireballs", "TeamBSends": ["Yoshi"] }
     ]
 }

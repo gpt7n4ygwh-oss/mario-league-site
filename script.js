@@ -92,6 +92,7 @@ fetch('data.json')
     .then(response => response.json())
     .then(data => {
         const standingsBody = document.getElementById("standings-body");
+        data.standings.sort((a, b) => (b.wins - a.wins) || (b.runDifferential - a.runDifferential));
         data.standings.forEach(team => {
             const row = document.createElement("tr");
             row.innerHTML = `
@@ -112,16 +113,28 @@ fetch('data.json')
             `;
         scheduleBody.appendChild(row);
         });
-        const tradesBody = document.getElementById("trades-body");
+        const tradesContainer = document.getElementById("trades-container");
         data.trades.forEach(trade => {
-            const row = document.createElement("tr");
-            row.innerHTML = `
-            <td>${trade.date}</td>
-            <td class="team-cell" style="--bg-image: url('${teamImages[trade.TeamA]}')">${trade.TeamA}</td>
-            <td class="player-cell" style="--bg-image: url('${playerImages[trade.TeamASends]}')">${trade.TeamASends}</td>
-            <td class="team-cell" style="--bg-image: url('${teamImages[trade.TeamB]}')">${trade.TeamB}</td>
-            <td class="player-cell" style="--bg-image: url('${playerImages[trade.TeamBSends]}')">${trade.TeamBSends}</td>
+            const card = document.createElement("div");
+            card.className = "trade-card";
+            const teamAImages = trade.TeamASends.map(player => `<img class="trade-logo" src="${playerImages[player]}">`).join("");
+            const teamBImages = trade.TeamBSends.map(player => `<img class="trade-logo" src="${playerImages[player]}">`).join("");
+            card.innerHTML = `
+                <div class="trade-side" style="--bg-image: url('${teamImages[trade.TeamA]}')">
+                    ${teamAImages}
+                    <p class="trade-team">${trade.TeamA}</p>
+                    <p class="trade-player">sends ${trade.TeamASends.join(", ")}</p>
+                </div>
+                <div class="trade-middle">
+                    <p class="trade-date">${trade.date}</p>
+                    <p class="trade-arrows">⇄</p>
+                </div>
+                <div class="trade-side" style="--bg-image: url('${teamImages[trade.TeamB]}')">
+                    ${teamBImages}
+                    <p class="trade-team">${trade.TeamB}</p>
+                    <p class="trade-player">sends ${trade.TeamBSends.join(", ")}</p>
+                </div>
             `;
-        tradesBody.appendChild(row);
+            tradesContainer.appendChild(card);
         });
     });
