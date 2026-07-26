@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Page</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1 id="team-name">Team</h1>
+        <nav>
+            <a href="index.html">Home</a>
+        </nav>
+    </header>
+
+    <main>
+        <h2>Record</h2>
+        <p id="team-record"></p>
+
+        <h2>Roster</h2>
+        <ul id="team-roster"></ul>
+
+        <h2>Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Home</th>
+                    <th>Away</th>
+                    <th>Result</th>
+                </tr>
+            </thead>
+            <tbody id="team-schedule-body"></tbody>
+        </table>
+    </main>
+
+    <footer>
+        <p>FAF League.</p>
+    </footer>
+    <script src="image-data.js"></script>
+    <script src="roster-logic.js"></script>
+    <script src="team.js"></script>
+</body>
+</html>

@@ -14,8 +14,15 @@
         { "date": "2024-06-05", "home_team": "Peach Monarchs", "away_team": "DK Wilds", "result": "DK Wilds won 3-0" }
     ],
     "trades": [
-        { "date": "2024-06-01", "TeamA": "Mario Fireballs", "TeamASends": ["Green Koopa", "Red Koopa"], "TeamB": "Luigi Knights",  "TeamBSends": ["Waluigi"] },
+        { "date": "2024-06-01", "TeamA": "Mario Fireballs", "TeamASends": ["Red Toad", "Red Koopa"], "TeamB": "Luigi Knights",  "TeamBSends": ["Blue Yoshi"] },
         { "date": "2024-06-02", "TeamA": "Bowser Monsters", "TeamASends": ["Red Toad"], "TeamB": "Peach Monarchs", "TeamBSends": ["Daisy"] },
         { "date": "2024-06-03", "TeamA": "Daisy Flowers", "TeamASends": ["Daisy"], "TeamB": "Mario Fireballs", "TeamBSends": ["Yoshi"] }
+    ],
+    "rosters": [
+        { "team": "Mario Fireballs", "players": ["Mario", "Red Koopa", "Red Toad"] },
+        { "team": "Luigi Knights", "players": ["Luigi", "Blue Toad", "Blue Yoshi"] },
+        { "team": "Bowser Monsters", "players": ["Bowser", "Gray Shyguy", "Goomba"] },
+        { "team": "Peach Monarchs", "players": ["Peach", "Pink Yoshi", "Toadette"] },
+        { "team": "Daisy Flowers", "players": ["Daisy", "Purple Toad", "Dixie Kong"] }
     ]
 }

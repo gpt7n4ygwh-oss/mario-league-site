@@ -1,93 +1,3 @@
-const playerImages = {
-    "Baby Daisy": "images/characters/babydaisy.png",
-    "Baby DK": "images/characters/babydk.png",
-    "Baby Luigi": "images/characters/babyluigi.png",
-    "Baby Mario": "images/characters/babymario.png",
-    "Baby Peach": "images/characters/babypeach.png",
-    "Birdo": "images/characters/birdo.png",
-    "Blooper": "images/characters/blooper.png",
-    "Boo": "images/characters/boo.png",
-    "Boomerang Bro": "images/characters/boomerangbro.png",
-    "Bowser": "images/characters/bowser.png",
-    "Bowser Jr.": "images/characters/bowserjr.png",
-    "Daisy": "images/characters/daisy.png",
-    "Dark Bones": "images/characters/darkbones.png",
-    "Diddy Kong": "images/characters/diddykong.png",
-    "Dixie Kong": "images/characters/dixiekong.png",
-    "Donkey Kong": "images/characters/donkeykong.png",
-    "Dry Bones": "images/characters/drybones.png",
-    "Blue Dry Bones": "images/characters/bluedrybones.png",
-    "Green Dry Bones": "images/characters/greendrybones.png",
-    "Fire Bro": "images/characters/firebro.png",
-    "Funky Kong": "images/characters/funkykong.png",
-    "Goomba": "images/characters/goomba.png",
-    "Hammer Bro": "images/characters/hammerbro.png",
-    "King Boo": "images/characters/kingboo.png",
-    "King K. Rool": "images/characters/kingkrool.png",
-    "Red Paratroopa": "images/characters/redparatroopa.png",
-    "Green Paratroopa": "images/characters/greenparatroopa.png",
-    "Green Koopa": "images/characters/greenkoopa.png",
-    "Red Koopa": "images/characters/redkoopa.png",
-    "Blue Kritter": "images/characters/bluekritter.png",
-    "Brown Kritter": "images/characters/brownkritter.png",
-    "Green Kritter": "images/characters/greenkritter.png",
-    "Red Kritter": "images/characters/redkritter.png",
-    "Luigi": "images/characters/luigi.png",
-    "Blue Magikoopa": "images/characters/magikoopa.png",
-    "Green Magikoopa": "images/characters/greenmagikoopa.png",
-    "Red Magikoopa": "images/characters/redmagikoopa.png",
-    "Yellow Magikoopa": "images/characters/yellowmagikoopa.png",
-    "Mario": "images/characters/mario.png",
-    "Monty Mole": "images/characters/montymole.png",
-    "Blue Noki": "images/characters/bluenoki.png",
-    "Green Noki": "images/characters/greennoki.png",
-    "Red Noki": "images/characters/rednoki.png",
-    "Paragoomba": "images/characters/paragoomba.png",
-    "Peach": "images/characters/peach.png",
-    "Petey": "images/characters/petey.png",
-    "Blue Pianta": "images/characters/bluepianta.png",
-    "Red Pianta": "images/characters/redpianta.png",
-    "Yellow Pianta": "images/characters/yellowpianta.png",
-    "Blue Shyguy": "images/characters/blueshyguy.png",
-    "Gray Shyguy": "images/characters/grayshyguy.png",
-    "Green Shyguy": "images/characters/greenshyguy.png",
-    "Red Shyguy": "images/characters/redshyguy.png",
-    "Yellow Shyguy": "images/characters/yellowshyguy.png",
-    "Tiny Kong": "images/characters/tinykong.png",
-    "Blue Toad": "images/characters/bluetoad.png",
-    "Green Toad": "images/characters/greentoad.png",
-    "Purple Toad": "images/characters/purpletoad.png",
-    "Red Toad": "images/characters/redtoad.png",
-    "Yellow Toad": "images/characters/yellowtoad.png",
-    "Toadette": "images/characters/toadette.png",
-    "Toadsworth": "images/characters/toadsworth.png",
-    "Waluigi": "images/characters/waluigi.png",
-    "Wario": "images/characters/wario.png",
-    "Wiggler": "images/characters/wiggler.png",
-    "Yoshi": "images/characters/greenyoshi.png",
-    "Blue Yoshi": "images/characters/blueyoshi.png",
-    "Light Blue Yoshi": "images/characters/lightblueyoshi.png",
-    "Pink Yoshi": "images/characters/pinkyoshi.png",
-    "Red Yoshi": "images/characters/redyoshi.png",
-    "Yellow Yoshi": "images/characters/yellowyoshi.png",
-    "Mii": "images/characters/mii.png"
-};
-
-const teamImages = {
-    "Mario Fireballs": "images/teams/mariofireballs.png",
-    "Peach Monarchs": "images/teams/peachmonarchs.png",
-    "Yoshi Eggs": "images/teams/yoshieggs.png",
-    "Wario Muscles": "images/teams/wariomuscles.png",
-    "DK Wilds": "images/teams/dkwilds.png",
-    "Bowser Monsters": "images/teams/bowsermonsters.png",
-    "Luigi Knights": "images/teams/luigiknights.png",
-    "Daisy Flowers": "images/teams/daisyflowers.png",
-    "Birdo Bows": "images/teams/birdobows.png",
-    "Waluigi Spitballs": "images/teams/waluigispitballs.png",
-    "Diddy Monkeys": "images/teams/diddymonkeys.png",
-    "Bowser Jr. Rookies": "images/teams/bowserjrrookies.png",
-}
-
 fetch('data.json')
     .then(response => response.json())
     .then(data => {
@@ -96,7 +6,7 @@ fetch('data.json')
         data.standings.forEach(team => {
             const row = document.createElement("tr");
             row.innerHTML = `
-            <td class="team-cell" style="--bg-image: url('${teamImages[team.team]}')">${team.team}</td>
+            <td class="team-cell" style="--bg-image: url('${teamImages[team.team]}')"><a href="team.html?name=${encodeURIComponent(team.team)}">${team.team}</a></td>
             <td>${team.wins}</td>
             <td>${team.losses}</td>
             `;
@@ -107,8 +17,8 @@ fetch('data.json')
             const row = document.createElement("tr");
             row.innerHTML = `
             <td>${game.date}</td>
-            <td class="team-cell" style="--bg-image: url('${teamImages[game.home_team]}')">${game.home_team}</td>
-            <td class="team-cell" style="--bg-image: url('${teamImages[game.away_team]}')">${game.away_team}</td>
+            <td class="team-cell" style="--bg-image: url('${teamImages[game.home_team]}')"><a href="team.html?name=${encodeURIComponent(game.home_team)}">${game.home_team}</a></td>
+            <td class="team-cell" style="--bg-image: url('${teamImages[game.away_team]}')"><a href="team.html?name=${encodeURIComponent(game.away_team)}">${game.away_team}</a></td>
             <td>${game.result}</td>
             `;
         scheduleBody.appendChild(row);
@@ -122,7 +32,7 @@ fetch('data.json')
             card.innerHTML = `
                 <div class="trade-side" style="--bg-image: url('${teamImages[trade.TeamA]}')">
                     ${teamAImages}
-                    <p class="trade-team">${trade.TeamA}</p>
+                    <p class="trade-team"><a href="team.html?name=${encodeURIComponent(trade.TeamA)}">${trade.TeamA}</a></p>
                     <p class="trade-player">sends ${trade.TeamASends.join(", ")}</p>
                 </div>
                 <div class="trade-middle">
@@ -131,7 +41,7 @@ fetch('data.json')
                 </div>
                 <div class="trade-side" style="--bg-image: url('${teamImages[trade.TeamB]}')">
                     ${teamBImages}
-                    <p class="trade-team">${trade.TeamB}</p>
+                    <p class="trade-team"><a href="team.html?name=${encodeURIComponent(trade.TeamB)}">${trade.TeamB}</a></p>
                     <p class="trade-player">sends ${trade.TeamBSends.join(", ")}</p>
                 </div>
             `;
