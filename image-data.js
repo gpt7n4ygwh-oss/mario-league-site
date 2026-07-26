@@ -33,7 +33,7 @@ const playerImages = {
     "Green Kritter": "images/characters/greenkritter.png",
     "Red Kritter": "images/characters/redkritter.png",
     "Luigi": "images/characters/luigi.png",
-    "Blue Magikoopa": "images/characters/magikoopa.png",
+    "Blue Magikoopa": "images/characters/bluemagikoopa.png",
     "Green Magikoopa": "images/characters/greenmagikoopa.png",
     "Red Magikoopa": "images/characters/redmagikoopa.png",
     "Yellow Magikoopa": "images/characters/yellowmagikoopa.png",

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Draft</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>Draft</h1>
+    <nav>
+      <a href="index.html">Home</a>
+    </nav>
+  </header>
+
+  <main>
+    <label for="team-select">Drafting for:</label>
+    <select id="team-select">
+      <option value="Mario Fireballs">Mario Fireballs</option>
+      <option value="Luigi Knights">Luigi Knights</option>
+      <option value="Bowser Monsters">Bowser Monsters</option>
+      <option value="Peach Monarchs">Peach Monarchs</option>
+      <option value="Daisy Flowers">Daisy Flowers</option>
+    </select>
+
+    <h2>Available Players</h2>
+    <ul id="available-players"></ul>
+  </main>
+
+  <footer>
+    <p>FAF League.</p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <script src="supabase-client.js"></script>
+  <script src="image-data.js"></script>
+  <script src="draft.js"></script>
+</body>
+</html>
